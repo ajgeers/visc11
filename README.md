@@ -68,7 +68,7 @@ Clone the repository:
 git clone https://github.com/ajgeers/visc11
 ```
 
-Download the data from [FigShare]:
+Download the data from FigShare:
 ```sh
 python code/download_data.py
 ```
