@@ -1,0 +1,1 @@
+Figures output by the Python scripts will be stored in this folder.
