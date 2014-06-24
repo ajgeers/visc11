@@ -23,17 +23,11 @@ The subject of the challenge was an aneurysm located at the anterior communicati
 
 ![](figs/example/geometry.png?raw=true)
 
-![](figs/example/stent_configurations.png?raw=true)
-
-![](figs/example/streamplot_xyplane.png?raw=true)
-![](figs/example/contourplot_xyplane.png?raw=true)
-![](figs/example/contourplot_yzplane.png?raw=true)
-![](figs/example/lineplot_yaxis.png?raw=true)
-
-
 Challenge participants were invited to simulate the steady-state velocity field in the aneurysm assuming blood to be an incompressible Newtonian fluid and the vessel wall to be rigid with a no-slip boundary condition.
 
 The velocity field had to be assessed for the untreated aneurysm (case 0) and for the aneurysm virtually treated with five different configurations of high-porosity stents (cases 1 to 5).
+
+![](figs/example/stent_configurations.png?raw=true)
 
 As input data, we provided surface meshes of the vascular geometry and the deployed stents, and flow rate boundary conditions for all inlets and outlets.
 
@@ -88,6 +82,10 @@ open figs/streamplot_xyplane/case1.pdf
 
 should give:
 
+![](figs/example/streamplot_xyplane.png?raw=true)
+![](figs/example/contourplot_xyplane.png?raw=true)
+![](figs/example/contourplot_yzplane.png?raw=true)
+![](figs/example/lineplot_yaxis.png?raw=true)
 
 
 Dependencies
