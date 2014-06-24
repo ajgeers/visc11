@@ -63,10 +63,8 @@ Instructions
 
 To run the scripts, follow these instructions.
 
-Create a directory, cd into it, and clone the repository:
+Clone the repository:
 ```sh
-mkdir visc11
-cd visc11
 git clone https://github.com/ajgeers/visc11
 ```
 
@@ -77,20 +75,22 @@ python code/download_data.py
 
 Run any of the other scripts to generate plots. For example,
 ```sh
-python code/streamplot_xyplane.py
+python code/contourplot_xyplane.py
 ```
 
-generates for each case a streamplot and saves it in PDF format.
-```sh
-open figs/streamplot_xyplane/case1.pdf
-```
+generates for each of the six cases and the piv image a velocity contourplot on the xy-plane and saves it in PDF format.
 
-should give:
+For case 1, these are the outputs of, from left to right, `code/streamplot_xyplane.py`, `code/contourplot_xyplane.py`, `code/contourplot_yzplane.py` and `code/lineplot_yaxis.py`:
 
 ![](figs/example/streamplot_xyplane.png?raw=true)
 ![](figs/example/contourplot_xyplane.png?raw=true)
 ![](figs/example/contourplot_yzplane.png?raw=true)
 ![](figs/example/lineplot_yaxis.png?raw=true)
+
+Notes:
+* Six research groups participated in the challenge. In the paper, we showed the results from all groups together in the plots generated with `code/lineplot_yaxis.py`.
+* `code/streamplot_xyplane.py` takes relatively long to run.
+* The data in `input/` is not needed for making the plots.
 
 
 Dependencies
