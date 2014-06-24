@@ -7,50 +7,55 @@ Author: Arjan Geers (ajgeers@gmail.com)
 About
 -----
 
-This repository contains Python scripts to reproduce the plots in:
+This is a repository with Python scripts to reproduce the plots in:
 
 Cito S, Geers AJ, Arroyo MP, Palero VR, Pallarés J, Vernet A, Blasco J, San Román L, Fu W, Qiao A, Janiga G, Miura Y, Ohta M, Mendina M, Usera G, and Frangi AF. Accuracy and Reproducibility of Patient-Specific Hemodynamics Models of Stented Intracranial Aneurysms: Report on the Virtual Intracranial Stenting Challenge 2011. Under review.
 
 
 The Challenge
----------
+-------------
 
 Since 2006, the yearly Virtual Intracranial Stenting Challenge (VISC) has been a unique platform evaluating the inter-group reproducibility of computational fluid dynamics (CFD) simulations of stented aneurysms.
 
 The 2011 edition of VISC was organized by Salvatore Cito and Arjan Geers. Preliminary results were presented at the 8th International Interdisciplinary Cerebrovascular Symposium (ICS) 2011, Shanghai, China.
 
-The subject of the challenge was an aneurysm located at the anterior communicating artery.
+The subject of the challenge was an aneurysm located at the anterior communicating artery. This is the vascular geometry with labels for inlets/outlets and regions-of-interest:
 
 ![](figs/example/geometry.png?raw=true)
 
 Challenge participants were invited to simulate the steady-state velocity field in the aneurysm assuming blood to be an incompressible Newtonian fluid and the vessel wall to be rigid with a no-slip boundary condition.
 
-The velocity field had to be assessed for the untreated aneurysm (case 0) and for the aneurysm virtually treated with five different configurations of high-porosity stents (cases 1 to 5).
+The velocity field had to be assessed for the untreated aneurysm (case 0) and for the aneurysm virtually treated with five different configurations of high-porosity stents (cases 1 to 5). The stent configurations were composed of open cell and closed cell stents, as can be seen in this image:
 
 ![](figs/example/stent_configurations.png?raw=true)
 
-As input data, we provided surface meshes of the vascular geometry and the deployed stents, and flow rate boundary conditions for all inlets and outlets.
+As input data, we provided the challenge participants with surface meshes of the vascular geometry and the deployed stents, blood properties, and flow rate boundary conditions for all inlets and outlets.
 
-The simulated velocity field of case 0 was validated with particle velocimetry imaging (PIV) measurements.
+The simulated velocity field of case 0 was validated with particle imaging velocimetry (PIV) measurements.
 
-For more details, we kindly refer to the journal publication.
+For more details, please check the journal publication.
 
 
 Data
 ----
-Data from the challenge are available on FigShare.
 
-1. DOI. Input data provided to the participants:
-    * Surface mesh of the vascular geometry in STL format
-    * Surface meshes of the deployed stents in STL format
-    * Instructions (including flow rate boundary conditions, blood viscosity and density, stent configurations, etc.)
-2. DOI. PIV image in vtkImageData format
-3. DOI. CFD solutions from one of the participants (group E) in vtkUnstructuredGrid format
+Three sets of data are available on [FigShare]:
 
-Notes:
+1. [Dataset 1]. Input data provided to the participants:
+    * STL surface mesh (in mm) of vascular geometry
+    * STL surface meshes (in mm) of deployed stent geometries
+    * Image of vascular and stent geometries with labels for inlets/outlets and regions-of-interest
+    * Instructions to challenge participants, including flow rate boundary conditions and blood properties
+2. [Dataset 2]. PIV dataset:
+    * PIV dataset (in mm) stored in a vtkImageData object
+3. [Dataset 3]. CFD solutions from one of the participants (research group E):
+    * CFD solutions of all cases stored in vtkUnstructuredGrid objects
+    * Details on the mesh and CFD set-up
 
-1. For all data, the unit of length is millimeters.
-2. The vascular and stent geometries and the PIV image were placed in the same coordinate system. They were positioned such that the xy-plane at z = 0 mm approximately sliced the main flow jet into the aneurysm along its axis.
+If you download the data directly from FigShare and wish to run the scripts, please copy [Dataset 1] to `data/input`, [Dataset 2] to `data/piv`, and [Dataset 3] to `data/cfd`. The gz-files in `data/cfd` will need to be decompressed.
+
+By far the easiest way to download the data, however, is to run `code/download_data.py`, cross your fingers, and watch the data folder getting populated automatically.
+
 
 
 Instructions
@@ -62,10 +67,10 @@ Create a directory, cd into it, and clone the repository:
 ```sh
 mkdir visc11
 cd visc11
-git clone [git-repo-url]
+git clone https://github.com/ajgeers/visc11
 ```
 
-Run download_data.py to download the data from FigShare:
+Download the data from [FigShare]:
 ```sh
 python code/download_data.py
 ```
@@ -99,11 +104,15 @@ The scripts in this repository were successfully run with:
 
 An easy way of installing these dependencies is to install [Anaconda]. Make sure to add VTK with `conda install vtk`.
 
-[Python]:www.python.org
-[NumPy]:www.numpy.org
-[matplotlib]:matplotlib.org
-[VTK]:www.vtk.org
+[Python]:http://www.python.org
+[NumPy]:http://www.numpy.org
+[matplotlib]:http://matplotlib.org
+[VTK]:http://www.vtk.org
 [Anaconda]:https://store.continuum.io/cshop/anaconda
+[FigShare]:http://figshare.com
+[Dataset 1]:http://dx.doi.org/10.6084/m9.figshare.1060443
+[Dataset 2]:http://dx.doi.org/10.6084/m9.figshare.1060453
+[Dataset 3]:http://dx.doi.org/10.6084/m9.figshare.1060464
 
 
 License
