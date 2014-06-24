@@ -63,9 +63,10 @@ Instructions
 
 To run the scripts, follow these instructions.
 
-Clone the repository:
+Clone the repository and cd into it:
 ```sh
 git clone https://github.com/ajgeers/visc11
+cd visc11
 ```
 
 Download the data from FigShare:
