@@ -21,8 +21,14 @@ The 2011 edition of VISC was organized by Salvatore Cito and Arjan Geers. Prelim
 
 The subject of the challenge was an aneurysm located at the anterior communicating artery.
 
-![geometry](figs/example/geometry.png?raw=true)
-![xyplane](figs/example/contourplot_xyplane.png?raw=true)
+![](figs/example/geometry.png?raw=true)
+
+![](figs/example/stent_configurations.png?raw=true)
+
+![](figs/example/streamplot_xyplane.png?raw=true)
+![](figs/example/contourplot_xyplane.png?raw=true)
+![](figs/example/contourplot_yzplane.png?raw=true)
+![](figs/example/lineplot_yaxis.png?raw=true)
 
 
 Challenge participants were invited to simulate the steady-state velocity field in the aneurysm assuming blood to be an incompressible Newtonian fluid and the vessel wall to be rigid with a no-slip boundary condition.
