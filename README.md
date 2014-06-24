@@ -3,19 +3,28 @@ Virtual Intracranial Stenting Challenge 2011
 
 Author: Arjan Geers (ajgeers@gmail.com)
 
-This repository contains scripts to reproduce the figures in:
 
-Cito S et al. Accuracy and Reproducibility of Patient-Specific Hemodynamics Models of Stented Intracranial Aneurysms: Report on the Virtual Intracranial Stenting Challenge 2011. Annals of Biomedical Engineering, 2014.
+About
+-----
+
+This repository contains Python scripts to reproduce the plots in:
+
+Cito S, Geers AJ, Arroyo MP, Palero VR, Pallarés J, Vernet A, Blasco J, San Román L, Fu W, Qiao A, Janiga G, Miura Y, Ohta M, Mendina M, Usera G, and Frangi AF. Accuracy and Reproducibility of Patient-Specific Hemodynamics Models of Stented Intracranial Aneurysms: Report on the Virtual Intracranial Stenting Challenge 2011. Under review.
 
 
-Challenge
+The Challenge
 ---------
 
 Since 2006, the yearly Virtual Intracranial Stenting Challenge (VISC) has been a unique platform evaluating the inter-group reproducibility of computational fluid dynamics (CFD) simulations of stented aneurysms.
 
 The 2011 edition of VISC was organized by Salvatore Cito and Arjan Geers. Preliminary results were presented at the 8th International Interdisciplinary Cerebrovascular Symposium (ICS) 2011, Shanghai, China.
 
-The subject of the challenge was an aneurysm located at the anterior communicating artery. Challenge participants were invited to simulate the steady-state velocity field in the aneurysm assuming blood to be an incompressible Newtonian fluid and the vessel wall to be rigid with a no-slip boundary condition.
+The subject of the challenge was an aneurysm located at the anterior communicating artery.
+
+![geometry](visc11/figs/example/geometry.png)
+
+
+Challenge participants were invited to simulate the steady-state velocity field in the aneurysm assuming blood to be an incompressible Newtonian fluid and the vessel wall to be rigid with a no-slip boundary condition.
 
 The velocity field had to be assessed for the untreated aneurysm (case 0) and for the aneurysm virtually treated with five different configurations of high-porosity stents (cases 1 to 5).
 
@@ -83,7 +92,7 @@ The scripts in this repository were successfully run with:
 - [matplotlib] 1.3
 - [VTK] 5.10
 
-The easiest way of installing these dependencies would be to install [Anaconda].
+An easy way of installing these dependencies is to install [Anaconda]. Make sure to add VTK with `conda install vtk`.
 
 [Python]:www.python.org
 [NumPy]:www.numpy.org
