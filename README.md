@@ -54,7 +54,7 @@ Three sets of data are available on [FigShare]:
 
 If you download the data directly from FigShare and wish to run the scripts, please copy [Dataset 1] to `data/input`, [Dataset 2] to `data/piv`, and [Dataset 3] to `data/cfd`. The gz-files in `data/cfd` will need to be decompressed.
 
-By far the easiest way to download the data, however, is to run `code/download_data.py`, cross your fingers, and watch the data folder getting populated automatically.
+However, by far the easiest way to download the data is to run `code/download_data.py`, cross your fingers, and watch the data folder getting populated automatically.
 
 
 
@@ -109,7 +109,7 @@ An easy way of installing these dependencies is to install [Anaconda]. Make sure
 [matplotlib]:http://matplotlib.org
 [VTK]:http://www.vtk.org
 [Anaconda]:https://store.continuum.io/cshop/anaconda
-[FigShare]:http://figshare.com
+[FigShare]:http://figshare.com/authors/Arjan_J_Geers/403823
 [Dataset 1]:http://dx.doi.org/10.6084/m9.figshare.1060443
 [Dataset 2]:http://dx.doi.org/10.6084/m9.figshare.1060453
 [Dataset 3]:http://dx.doi.org/10.6084/m9.figshare.1060464
