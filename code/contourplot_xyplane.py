@@ -1,4 +1,4 @@
-"""Contour plots of the in-plane velocity (xy-velocity) on the xy-slice. The
+"""Contour plots of the in-plane velocity (i.e. xy-velocity) on the xy-slice. The
 slices are obtained by slicing the CFD datasets (vtu format) with the xy-plane
 at z = 0 mm. To create a corresponding contour plot for the PIV dataset, we
 sample the PIV image with the CFD xy-slice of case 0.
@@ -6,7 +6,7 @@ sample the PIV image with the CFD xy-slice of case 0.
 We discarded the x < 6 mm region of the PIV image from data analysis, because we
 considered the particularly low velocity values in that region to be the result
 of an imaging artifact. For the contour plots, the lower value of the x plot
-range was therefore set to x = -6. Only a small part of 'artifact' is still
+range was therefore set to x = -6. Only a small part of the artifact is still
 visible in the upper left corner. As described in the paper's Discussion,
 slight inaccuracies in the refractive index matching between glass and fluid can
 lead to inaccuracies in the measured velocity field, most notably in regions

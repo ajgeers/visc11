@@ -1,5 +1,5 @@
 """Contour plots with streamlines superimposed of the in-plane velocity
-(xy-velocity) on the xy-slice. The slices are obtained by slicing the CFD
+(i.e. xy-velocity) on the xy-slice. The slices are obtained by slicing the CFD
 datasets (vtu format) with the xy-plane at z = 0 mm.
 
 """
@@ -20,20 +20,20 @@ def streamplot(cfd, ofile='streamplot.pdf', zloc=0.0, xmin=0, xmax=1,
     Input: Unstructured grid with Vx_mm_s, Vy_mm_s and Vxy_mm_s pointdata
     Output: Plot saved as PDF
 
-    To create the contourplot, the cfd dataset is sliced with a plane. From this
-    slice we extract the x- and y-coordinates, vxy, and a list with for each
-    triangle the indices of the three points that make up the triangle, ordered
-    in anticlockwise manner.
+    To create the contourplot, the cfd dataset is sliced with the xy-plane at
+    z = zloc. From this slice we extract the x- and y-coordinates, vxy, and a
+    list with for each triangle the indices of the three points that make up the
+    triangle, ordered in anticlockwise manner.
 
     To create the streamplot, the cfd dataset is probed with an evenly spaced
-    grid. The argument gridspacing controls the resolution. Note that
+    grid. The argument 'gridspacing' controls the resolution. Note that
     undersampling might lead to non-zero vxy values outside the flow domain and,
     thus, to streamlines running outside of it. The argument streamlinedensity
     controls the closeness of streamlines. When streamlinedensity=1, the domain
     is divided into a 25x25 grid; density linearly scales this grid.
 
-    In the paper, we also show plots of vxy vs. y. Therefore, a line
-    corresponding to the y-axis is added to the streamplot.
+    In the paper, we also show plots of vxy vs. y along the y-axis. Therefore, a
+    line corresponding to the y-axis is added to the streamplot.
 
     """
 

@@ -1,4 +1,4 @@
-"""Contour plots of the out-of-plane velocity (x-velocity) on the yz-slice. The
+"""Contour plots of the out-of-plane velocity (i.e. x-velocity) on the yz-slice. The
 slices are obtained by slicing the CFD datasets (vtu format) with the yz-plane
 at x = 3 mm.
 
@@ -50,7 +50,7 @@ def contourplot(yzslice, ofile='contourplot.pdf', zmin=0, zmax=1,
                ymin=0, ymax=1, hidelabels=False):
     """Create contourplot on yzslice"""
     yzslice = vtklib.triangulate(yzslice)
-    
+
     # data size
     numberofpoints = yzslice.GetNumberOfPoints()
     numberofcells = yzslice.GetNumberOfCells()

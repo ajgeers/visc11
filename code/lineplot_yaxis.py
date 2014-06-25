@@ -1,4 +1,5 @@
-"""xy-velocity along y-axis for all cfd datasets and the piv image"""
+"""Plot the xy-velocity along the y-axis for all cfd datasets and the piv
+image."""
 
 import os
 import vtk

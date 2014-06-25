@@ -2,7 +2,7 @@ import os
 from utils import iolib
 
 
-# find project root and specify url where data is located
+# find project root and specify url to FigShare
 root = os.path.join(os.path.dirname(__file__), os.pardir)
 figshare = 'http://files.figshare.com/'
 
