@@ -21,8 +21,8 @@ inputurls = ['1538408/ccs_center.stl', '1538407/ccs_left.stl',
              '1538412/ocs_right.stl', '1538410/surface.stl',
              '1545323/geometry.pdf', '1561674/challenge_instructions.txt']
 cfdurls = ['1540213/case0.vtu', '1540218/case1.vtu', '1540220/case2.vtu',
-            '1540219/case3.vtu', '1540222/case4.vtu', '1540221/case5.vtu',
-            '1540206/cfd_setup.txt']
+           '1561684/case3.vtu', '1540222/case4.vtu', '1540221/case5.vtu',
+           '1540206/cfd_setup.txt']
 
 # download piv data
 print '\r\nDownloading PIV data...'
