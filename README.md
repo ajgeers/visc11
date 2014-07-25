@@ -9,7 +9,7 @@ About
 
 This is a repository with Python scripts to reproduce some of the plots in:
 
-Cito S, Geers AJ, Arroyo MP, Palero VR, Pallarés J, Vernet A, Blasco J, San Román L, Fu W, Qiao A, Janiga G, Miura Y, Ohta M, Mendina M, Usera G, and Frangi AF. Accuracy and Reproducibility of Patient-Specific Hemodynamics Models of Stented Intracranial Aneurysms: Report on the Virtual Intracranial Stenting Challenge 2011. Annals of Biomedical Engineering.In press.
+Cito S, Geers AJ, Arroyo MP, Palero VR, Pallarés J, Vernet A, Blasco J, San Román L, Fu W, Qiao A, Janiga G, Miura Y, Ohta M, Mendina M, Usera G, and Frangi AF. Accuracy and Reproducibility of Patient-Specific Hemodynamics Models of Stented Intracranial Aneurysms: Report on the Virtual Intracranial Stenting Challenge 2011. Annals of Biomedical Engineering. In press.
 
 
 The Challenge
