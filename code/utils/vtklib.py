@@ -1,12 +1,15 @@
 import vtk
 
 
-def extractboundaryedge(surface, feature_edges=False):
-    """Extract boundary edges of a surface mesh."""
+def extractfeatureedges(surface, boundary_edges=True,
+                        feature_edges=False, feature_angle=30):
+    """Extract feature edges of a surface mesh. Defaults to extracting boundary
+    edges."""
     edge = vtk.vtkFeatureEdges()
     edge.SetInput(surface)
-    if not feature_edges:
-        edge.FeatureEdgesOff()
+    edge.BoundaryEdgesOn() if boundary_edges else edge.BoundaryEdgesOff()
+    edge.FeatureEdgesOn() if feature_edges else edge.FeatureEdgesOff()
+    edge.SetFeatureAngle(feature_angle)
     edge.Update()
     return edge.GetOutput()
 

@@ -14,7 +14,7 @@ from utils import vtklib
 
 def slice_edge(yzslice):
     """Extract edge of yzslice"""
-    edge = vtklib.extractboundaryedge(yzslice)
+    edge = vtklib.extractfeatureedges(yzslice)
 
     # number of points and cells
     numberofpoints = edge.GetNumberOfPoints()
