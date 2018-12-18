@@ -103,8 +103,8 @@ def streamplot(cfd, ofile='streamplot.pdf', zloc=0.0, xmin=0, xmax=1,
 
     # probe the cfd result with evenly spaced grid
     prober = vtk.vtkProbeFilter()
-    prober.SetInput(probe)
-    prober.SetSource(cfd)
+    prober.SetInputData(probe)
+    prober.SetSourceData(cfd)
     prober.Update()
     xyslicegrid = prober.GetOutput()
 
