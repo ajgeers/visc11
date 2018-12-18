@@ -4,7 +4,7 @@ from utils import iolib
 
 # find project root and specify url to FigShare
 root = os.path.join(os.path.dirname(__file__), os.pardir)
-figshare = 'http://files.figshare.com/'
+figshare = 'https://s3-eu-west-1.amazonaws.com/pfigshare-u-files/'
 
 # create local folders to download data into
 cfdpath = os.path.join(root, 'data', 'cfd')
@@ -15,14 +15,14 @@ for path in [cfdpath, pivpath, inputpath]:
         os.makedirs(path)
 
 # location of files on FigShare
-pivurls = ['1538421/piv.vti']
-inputurls = ['1538408/ccs_center.stl', '1538407/ccs_left.stl',
-             '1538409/ccs_right.stl', '1538411/ocs_left.stl',
-             '1538412/ocs_right.stl', '1538410/surface.stl',
-             '1545323/geometry.pdf', '1561674/challenge_instructions.txt']
-cfdurls = ['1540213/case0.vtu', '1540218/case1.vtu', '1540220/case2.vtu',
-           '1561684/case3.vtu', '1540222/case4.vtu', '1540221/case5.vtu',
-           '1540206/cfd_setup.txt']
+pivurls = ['3196046/piv.vti']
+inputurls = ['3195839/ccs_center.stl', '3195833/ccs_left.stl',
+             '3195851/ccs_right.stl', '3195878/ocs_left.stl',
+             '3195890/ocs_right.stl', '3195863/surface.stl',
+             '3196049/geometry.pdf', '1561674/challenge_instructions.txt']
+cfdurls = ['3196028/case0.vtu', '3196031/case1.vtu', '3196034/case2.vtu',
+           '3196037/case3.vtu', '3196040/case4.vtu', '3196043/case5.vtu',
+           '3196025/cfd_setup.txt']
 
 # download piv data
 print '\r\nDownloading PIV data...'
