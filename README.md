@@ -101,7 +101,7 @@ The scripts in this repository were successfully run with:
 - [Python] 2.7
 - [NumPy] 1.8
 - [matplotlib] 1.3
-- [VTK] 5.10
+- [VTK] 8.2
 
 An easy way of installing these dependencies is to install [Anaconda]. Make sure to add VTK with `conda install vtk`.
 

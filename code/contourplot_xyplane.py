@@ -27,8 +27,8 @@ from utils import vtklib
 def samplepiv(piv, xyslice):
     """Sample piv image with xyslice"""
     prober = vtk.vtkProbeFilter()
-    prober.SetInput(xyslice)
-    prober.SetSource(piv)
+    prober.SetInputData(xyslice)
+    prober.SetSourceData(piv)
     prober.Update()
     return prober.GetOutput()
 
