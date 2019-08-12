@@ -47,7 +47,7 @@ inset_kwargs = [dict(loc1=2, loc2=4),
 cases = ['case' + str(i).zfill(1) for i in range(6)]
 for j, case in enumerate(cases):
 
-    print case
+    print(case)
 
     # initiate figure with inset axes
     fig = plt.figure()
@@ -85,14 +85,14 @@ for j, case in enumerate(cases):
     ax.set_ylim(0, 51)
     ax.set_xlabel('y [mm]', fontsize=36)
     ax.set_ylabel('$\mathregular{v_{xy}}$ [mm/s]', fontsize=36)
-    plt.setp(ax.get_xticklabels(), fontsize=32)
-    plt.setp(ax.get_yticklabels(), fontsize=32)
+    plt.setp(ax.get_xticklabels(), fontsize=26)
+    plt.setp(ax.get_yticklabels(), fontsize=26)
 
     # inset properties
     axins.set_xlim(inset_xlim[j][0], inset_xlim[j][1])
     axins.set_ylim(inset_ylim[j][0], inset_ylim[j][1])
-    plt.setp(axins.get_xticklabels(), fontsize=18)
-    plt.setp(axins.get_yticklabels(), fontsize=18)
+    plt.setp(axins.get_xticklabels(), fontsize=14)
+    plt.setp(axins.get_yticklabels(), fontsize=14)
     mark_inset(ax, axins, facecolor='None', **inset_kwargs[j])
 
     # Set max ticks of x-axis of inset. Command doesn't explicitly refer to

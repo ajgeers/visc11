@@ -1,0 +1,9 @@
+name: visc11
+channels:
+  - conda-forge
+dependencies:
+  - matplotlib=3.1.*
+  - numpy=1.17.*
+  - python=3.7.*
+  - vtk=8.2.*
+

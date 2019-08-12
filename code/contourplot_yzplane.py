@@ -113,7 +113,7 @@ if not os.path.exists(path):
 cases = ['case' + str(i).zfill(1) for i in range(6)]
 for case in cases:
 
-    print case
+    print(case)
 
     # read cfd data and extract the yzslice
     cfd = iolib.readvtu(os.path.join(root, 'data', 'cfd', case + '.vtu'))

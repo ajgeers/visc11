@@ -1,19 +1,16 @@
-Virtual Intracranial Stenting Challenge 2011
-============================================
+# Virtual Intracranial Stenting Challenge 2011
 
 Author: Arjan Geers (ajgeers@gmail.com)
 
 
-About
------
+## About
 
 This is a repository with Python scripts to reproduce some of the plots in:
 
 Cito S, Geers AJ, Arroyo MP, Palero VR, Pallarés J, Vernet A, Blasco J, San Román L, Fu W, Qiao A, Janiga G, Miura Y, Ohta M, Mendina M, Usera G, and Frangi AF. Accuracy and Reproducibility of Patient-Specific Hemodynamics Models of Stented Intracranial Aneurysms: Report on the Virtual Intracranial Stenting Challenge 2011. Annals of Biomedical Engineering, 43(1):154–167, 2015.
 
 
-The Challenge
--------------
+## The Challenge
 
 Since 2006, the yearly Virtual Intracranial Stenting Challenge (VISC) has been a unique platform evaluating the inter-group reproducibility of computational fluid dynamics (CFD) simulations of stented aneurysms.
 
@@ -36,30 +33,27 @@ The simulated velocity field of case 0 was validated with particle imaging veloc
 For more details, please check the journal publication.
 
 
-Data
-----
+## Data
 
-Three sets of data are available on [FigShare]:
+Three sets of data are available on FigShare:
 
-1. [Dataset 1]. Input data provided to the participants:
+1. [Dataset 1](http://dx.doi.org/10.6084/m9.figshare.1060443). Input data provided to the participants:
     * STL surface mesh (in mm) of vascular geometry
     * STL surface meshes (in mm) of deployed stent geometries
     * Image of vascular and stent geometries with labels for inlets/outlets and regions-of-interest
     * Instructions to challenge participants, including flow rate boundary conditions and blood properties
-2. [Dataset 2]. PIV dataset:
+2. [Dataset 2](http://dx.doi.org/10.6084/m9.figshare.1060453). PIV dataset:
     * PIV dataset (in mm) stored in a vtkImageData object
-3. [Dataset 3]. CFD solutions from one of the participants (research group E):
+3. [Dataset 3](http://dx.doi.org/10.6084/m9.figshare.1060464). CFD solutions from one of the participants (research group E):
     * CFD solutions of all cases stored in vtkUnstructuredGrid objects
     * Details on the mesh and CFD set-up
 
-If you download the data directly from FigShare and wish to run the scripts, please copy [Dataset 1] to `data/input`, [Dataset 2] to `data/piv`, and [Dataset 3] to `data/cfd`. The gz-files in `data/cfd` will need to be decompressed.
+If you download the data directly from FigShare and wish to run the scripts, please copy Dataset 1 to `data/input`, Dataset 2 to `data/piv`, and Dataset 3 to `data/cfd`. The gz-files in `data/cfd` will need to be decompressed.
 
 However, by far the easiest way to download the data is to run `code/download_data.py`, cross your fingers, and watch the data folder getting populated automatically.
 
 
-
-Instructions
-------------
+## Instructions
 
 To run the scripts, follow these instructions.
 
@@ -94,29 +88,15 @@ Notes:
 * The data in `input/` is not needed for making the plots.
 
 
-Dependencies
-------------
+## Python environment
 
-The scripts in this repository were successfully run with:
-- [Python] 2.7
-- [NumPy] 1.8
-- [matplotlib] 1.3
-- [VTK] 8.2
-
-An easy way of installing these dependencies is to install [Anaconda]. Make sure to add VTK with `conda install vtk`.
-
-[Python]:http://www.python.org
-[NumPy]:http://www.numpy.org
-[matplotlib]:http://matplotlib.org
-[VTK]:http://www.vtk.org
-[Anaconda]:https://store.continuum.io/cshop/anaconda
-[FigShare]:http://figshare.com/authors/Arjan_J_Geers/403823
-[Dataset 1]:http://dx.doi.org/10.6084/m9.figshare.1060443
-[Dataset 2]:http://dx.doi.org/10.6084/m9.figshare.1060453
-[Dataset 3]:http://dx.doi.org/10.6084/m9.figshare.1060464
+```sh
+conda env create -n visc11 -f environment.yml
+conda activate visc11
+```
 
 
-License
--------
+## License
 
 BSD 2-Clause
+

@@ -25,21 +25,21 @@ cfdurls = ['3196028/case0.vtu', '3196031/case1.vtu', '3196034/case2.vtu',
            '3196025/cfd_setup.txt']
 
 # download piv data
-print '\r\nDownloading PIV data...'
+print('\r\nDownloading PIV data...')
 for pivurl in pivurls:
     pivfilename = pivurl.split('/')[1]
     iolib.download_data(figshare + pivurl,
                         os.path.join(pivpath, pivfilename))
 
 # download input data
-print '\r\nDownloading input data...'
+print('\r\nDownloading input data...')
 for inputurl in inputurls:
     inputfilename = inputurl.split('/')[1]
     iolib.download_data(figshare + inputurl,
                         os.path.join(inputpath, inputfilename))
 
 # download cfd data
-print '\r\nDownloading CFD data...'
+print('\r\nDownloading CFD data...')
 for cfdurl in cfdurls:
     cfdfilename = cfdurl.split('/')[1]
     if os.path.splitext(cfdfilename)[1] == '.txt':
@@ -48,3 +48,4 @@ for cfdurl in cfdurls:
     else:
         iolib.download_data(figshare + cfdurl + '.gz',
                             os.path.join(cfdpath, cfdfilename), True)
+

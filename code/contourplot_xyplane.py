@@ -96,7 +96,7 @@ if not os.path.exists(path):
 datasets = ['case' + str(i).zfill(1) for i in range(6)] + ['piv']
 for dataset in datasets:
 
-    print dataset
+    print(dataset)
 
     if dataset == 'piv':
         # read piv image and probe with cfd xyslice of case 0

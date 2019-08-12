@@ -1,5 +1,5 @@
 import vtk
-import urllib2
+from urllib.request import urlopen
 import zlib
 import sys
 
@@ -15,9 +15,8 @@ def download_data(url, destination, decompress=False, chunksize=(16*1024)):
 
     """
     # open url and extract file size
-    response = urllib2.urlopen(url)
-    file_size = int(response.info().getheader('Content-Length'))
-
+    response = urlopen(url)
+    file_size = int(response.getheader('Content-Length'))
 
     if decompress:
         # create decompression object for decompressing data streams
